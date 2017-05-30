@@ -6,9 +6,9 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root", //Your username
-    password: "password", //Your password
+    password: "--------", //Your password
     database: "Bamazon"
-})
+});
 
 var checkAndBuy = function() {
     connection.query('SELECT * FROM products', function(err, res) {
@@ -36,7 +36,9 @@ var checkAndBuy = function() {
                     return false;
                 }
             }
-        }, {
+        };
+
+        {
             name: "Quantity",
             type: "input",
             message: "How many of these items would you like to purchase?",

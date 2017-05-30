@@ -1,6 +1,5 @@
 CREATE DATABASE Bamazon;
 
-
 USE Bamazon;
 
 CREATE TABLE products (
@@ -11,9 +10,7 @@ ItemID MEDIUMINT AUTO_INCREMENT NOT NULL,
     Price DECIMAL(10,2) NOT NULL,
     StockQuantity INT(10) NOT NULL,
     primary key(ItemID)
-
 );
-
 select * from products;
 
 INSERT INTO products (ProductName,DepartmentName,Price,StockQuantity)
